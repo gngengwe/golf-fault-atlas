@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Golf Fault Atlas — Know Your Faults</title>
+  <meta name="description" content="An illustrated atlas of the mistakes every golfer recognizes — what causes each one, how it's fixed, and what tool helps." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&family=Source+Sans+3:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="stage">
+    <div class="book" id="book">
+      <div class="leaf" id="leafBack"></div>
+      <div class="leaf" id="leafFront"></div>
+    </div>
+
+    <button class="nav-zone nav-prev" id="zonePrev" aria-label="Previous page"></button>
+    <button class="nav-zone nav-next" id="zoneNext" aria-label="Next page"></button>
+
+    <div class="chrome">
+      <div class="progress"><div class="progress-bar" id="progressBar"></div></div>
+      <div class="controls">
+        <button class="chrome-btn" id="btnPrev" aria-label="Previous">&#8592;</button>
+        <span class="page-count" id="pageCount">Cover</span>
+        <button class="chrome-btn" id="btnNext" aria-label="Next">&#8594;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
