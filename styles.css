@@ -103,13 +103,27 @@ body {
 
 .pane-art {
   position: relative;
-  background:
-    radial-gradient(120% 140% at 50% 50%, #1a2115 0%, #0c0f0a 70%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: hidden;
+  background: #0c0f0a;
 }
-.pane-art img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.art-bg {
+  position: absolute;
+  inset: -4%;
+  width: 108%;
+  height: 108%;
+  object-fit: cover;
+  filter: blur(34px) saturate(1.2) brightness(.6);
+  transform: scale(1.05);
+}
+.art-fg {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 20px 44px rgba(0,0,0,.5));
+}
 .pane-art .art-tag {
   position: absolute; left: 18px; bottom: 16px;
   font-family: var(--mono); font-size: 10.5px; letter-spacing: .08em;
