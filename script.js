@@ -110,7 +110,6 @@ function renderMarkup(index) {
   }
   return `<div class="page-inner">
     <div class="pane-art">
-      <img class="art-bg" src="${e.image}" alt="" aria-hidden="true">
       <img class="art-fg" src="${e.image}" alt="${e.name}">
       <span class="art-tag">${index} / ${TOTAL_ENTRIES}</span>
     </div>
