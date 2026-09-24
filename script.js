@@ -108,6 +108,17 @@ let current = 0;
 let animating = false;
 let pendingIndex = 0;
 
+// If an image fails to load (stale cache, transient edge hiccup), retry once with a cache-buster.
+document.addEventListener("error", (ev) => {
+  const img = ev.target;
+  if (img && img.tagName === "IMG" && !img.dataset.retried) {
+    img.dataset.retried = "1";
+    const url = new URL(img.getAttribute("src"), location.href);
+    url.searchParams.set("retry", Date.now());
+    img.src = url.toString();
+  }
+}, true);
+
 function evidenceTag(kind) {
   if (kind === "check") return `<span class="ev ev-check" title="Well-established mechanism">&#10003;</span>`;
   if (kind === "caution") return `<span class="ev ev-caution" title="Real, but not fully golf-specific verified">&#9888;</span>`;
