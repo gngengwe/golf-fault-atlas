@@ -165,6 +165,22 @@ body {
   margin: 4px 0 0;
 }
 
+.ev {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: help;
+}
+.ev-check { color: var(--accent); }
+.ev-caution { color: var(--accent-2); }
+
+.cover-legend {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: rgba(242,239,226,.7);
+  margin: -2px 0 2px;
+}
+
 /* ---- cover ---- */
 .cover-inner {
   position: relative;
